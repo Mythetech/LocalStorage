@@ -1,5 +1,5 @@
-using Blazored.LocalStorage;
-using Blazored.LocalStorage.Serialization;
+using Mythetech.LocalStorage;
+using Mythetech.LocalStorage.Serialization;
 using BlazorServer;
 using InteractiveServer.Components;
 using Microsoft.Extensions.DependencyInjection.Extensions;
@@ -12,9 +12,9 @@ builder.Services.AddRazorComponents()
 
 builder.Services.Replace(ServiceDescriptor.Scoped<IJsonSerializer, NewtonSoftJsonSerializer>());
 
-builder.Services.AddBlazoredLocalStorage();
+builder.Services.AddLocalStorage();
 // Use the below to enable streaming of objects with local storage
-//builder.Services.AddBlazoredLocalStorageStreaming();
+//builder.Services.AddLocalStorageStreaming();
 
 var app = builder.Build();
 

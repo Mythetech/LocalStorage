@@ -5,18 +5,18 @@ on:
     branches: [ main ]
 
 env:
-    NETCORE_VERSION: '8.0.100'
-    PROJECT_NAME: Blazored.LocalStorage
+    NETCORE_VERSION: '10.0.x'
+    PROJECT_NAME: Mythetech.LocalStorage
 
 jobs:
   build:
     name: Build and test
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
 
     - name: Setting up .NET Core SDK ${{ env.NETCORE_VERSION }}...
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@v4
       with:
         dotnet-version: ${{ env.NETCORE_VERSION }}
 

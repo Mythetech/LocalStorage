@@ -1,19 +1,19 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="$(DotNet8Version)" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="$(DotNet8Version)" PrivateAssets="all" />
-    <PackageReference Include="System.Net.Http.Json" Version="$(DotNet8Version)" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="$(DotNet10Version)" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="$(DotNet10Version)" PrivateAssets="all" />
+    <PackageReference Include="System.Net.Http.Json" Version="$(DotNet10Version)" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Blazored.LocalStorage\Blazored.LocalStorage.csproj" />
+    <ProjectReference Include="..\..\src\Mythetech.LocalStorage\Mythetech.LocalStorage.csproj" />
   </ItemGroup>
 
 </Project>

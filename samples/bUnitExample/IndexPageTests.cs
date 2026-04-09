@@ -11,7 +11,7 @@ namespace bUnitExample
         {
             // Arrange
             const string inputName = "John Smith";
-            var localStorage = this.AddBlazoredLocalStorage();
+            var localStorage = this.AddLocalStorage();
             var cut = RenderComponent<BlazorWebAssembly.Pages.Index>();
 
             // Act

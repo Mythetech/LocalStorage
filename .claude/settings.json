@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dotnet package:*)"
+    ],
+    "additionalDirectories": [
+      "/Users/tombrewer/Code/LocalStorage/src/Mythetech.LocalStorage"
+    ]
+  }
+}
