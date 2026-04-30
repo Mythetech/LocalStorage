@@ -14,7 +14,7 @@ env:
     PROJECT_NAME: LocalStorage
     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     NUGET_FEED: https://api.nuget.org/v3/index.json
-    NUGET_KEY: ${{ secrets.NUGET_KEY }}
+    NUGET_KEY: ${{ secrets.NUGET_ORG_API_KEY }}
 
 jobs:
   build:
