@@ -67,20 +67,3 @@ jobs:
 
       - name: Push to NuGet Feed
         run: dotnet nuget push ./nupkg/*.nupkg --source $NUGET_FEED --api-key $NUGET_KEY --skip-duplicate
-
-      - name: Publish Sample Site
-        run: dotnet publish -c Release samples/BlazorWebAssembly/BlazorWebAssembly.csproj
-
-      - name: Rewrite base href
-        uses: SteveSandersonMS/ghaction-rewrite-base-href@v1
-        with:
-          html_path: samples/BlazorWebAssembly/bin/Release/${{ env.OUTPUT_DIR }}/publish/wwwroot/index.html
-          base_href: /${{ env.PROJECT_NAME }}/
-
-      - name: Deploy to Github Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages
-          folder: samples/BlazorWebAssembly/bin/Release/${{ env.OUTPUT_DIR }}/publish/wwwroot
-          single-commit: true
